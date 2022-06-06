@@ -1,0 +1,71 @@
+// * use : mixin
+@use 'sub-mixin/mixin' as mx;
+@use 'sub-mixin/variable' as var;
+
+// Todo : Portfolio content
+
+// ? : Portfolio-item
+.port-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.portfolios {
+  @include mx.grid-col(repeat(3, 1fr));
+  margin-top: 3rem;
+  .portfolio-item {
+    position: relative;
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    .hover-items {
+      width: 100%;
+      height: 100%;
+      background-color: #27ae5f5e;
+      opacity: 0;
+      transform: scale(0);
+      @include mx.transDef();
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      @include mx.flex-box(column);
+      h3 {
+        font-size: 1.5rem;
+        color: var.$color-white;
+        margin-bottom: 1.5rem;
+      }
+      .icons {
+        @include mx.flex-box();
+        .icon {
+          @include mx.flex-box();
+          background-color: var.$color-secondary;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          margin: 0 1rem;
+          cursor: pointer;
+          @include mx.transDef();
+          i {
+            font-size: 2rem;
+            margin: 0 1rem;
+          }
+          &:hover {
+            background-color: var.$color-white;
+            i {
+              color: var.$color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}

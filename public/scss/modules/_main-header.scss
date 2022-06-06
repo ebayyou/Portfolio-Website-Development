@@ -5,8 +5,7 @@
 // Todo : Header content
 
 .header-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @include mx.grid-col(repeat(2, 1fr), 0);
   height: 100%;
   .left-header {
     @include mx.flex-box(row, start);

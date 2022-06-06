@@ -20,7 +20,7 @@ function pageTransitions() {
 
     if (id) {
       // ? : removing selected from the other btns
-      secsBtns.forEach((btn) => {
+      secsBtn.forEach((btn) => {
         btn.classList.remove('active-section');
       });
       e.target.classList.add('active-section');
