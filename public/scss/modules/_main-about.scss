@@ -3,6 +3,8 @@
 @use 'sub-mixin/variable' as var;
 
 // Todo : about content
+
+// ? : about-container
 .about-container {
   @include mx.grid-col();
   gap: 0;
@@ -65,6 +67,7 @@
   }
 }
 
+// ? : about-stats
 .about-stats {
   padding-bottom: 4rem;
   .progress-bars {
@@ -121,6 +124,7 @@
   }
 }
 
+// ? : stats-title
 .stats-title {
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -136,5 +140,53 @@
     height: 4px;
     background-color: var.$color-gray-500;
     transform: translateX(-50%);
+  }
+}
+
+// ? : timeline
+.timeline {
+  @include mx.grid-col();
+  padding-bottom: 3rem;
+  .timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    border-left: 5px solid var.$color-gray-500;
+    .tl-icon {
+      position: absolute;
+      left: -27px;
+      top: 0;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: var.$color-secondary;
+      @include mx.flex-box();
+      i {
+        font-size: 1.3rem;
+      }
+    }
+    .tl-duration {
+      padding: 0.2rem 0.6rem;
+      margin-bottom: 0.5rem;
+      background-color: var.$color-gray-500;
+      border-radius: 15px;
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    h5 {
+      padding: 1rem 0;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 600;
+      span {
+        color: var.$color-gray-200;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+    p {
+      color: var.$color-gray-200;
+    }
   }
 }
