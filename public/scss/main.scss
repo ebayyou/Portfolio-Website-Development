@@ -1,8 +1,56 @@
-.text {
-  text-align: center;
-  font-size: 32px;
-  font-style: italic;
-  text-decoration: line-through;
-  color: rgb(9, 34, 70);
-  margin-top: 20px;
+// * use : mixin
+@use 'modules/sub-mixin/mixin' as mx;
+@use 'modules/sub-mixin/variable' as var;
+
+// * use : element components
+// ? : basic-style
+@use 'modules/basic-style';
+// ? : header-section
+@use 'modules/main-header';
+// ? : about-section
+@use 'modules/main-about';
+
+// * import : google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+
+// Todo Indepedent components :
+
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+}
+.main-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var.$color-secondary;
+  @include mx.flex-box();
+  overflow: hidden;
+  .btn-text {
+    padding: 0 2rem;
+  }
+  .btn-icon {
+    background-color: var.$color-secondary;
+    @include mx.flex-box();
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+    @include mx.transDef();
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-color: var.$color-secondary;
+      transform: translateX(0);
+    }
+  }
 }

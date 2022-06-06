@@ -1,0 +1,18 @@
+// todo : build mixin
+
+@mixin flex-box($direction: row, $space-x: center, $space-y: center) {
+  display: flex;
+  justify-content: $space-x;
+  align-items: $space-y;
+  flex-direction: $direction;
+}
+
+@mixin grid-col($space-col: repeat(2, 1fr), $gap: 2rem) {
+  display: grid;
+  grid-template-columns: $space-col;
+  gap: $gap;
+}
+
+@mixin transDef($property: all, $duration: 0.4s, $timing-function: ease-in-out) {
+  transition: $property $duration $timing-function;
+}

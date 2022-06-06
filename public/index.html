@@ -5,13 +5,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website - Development</title>
-    <!-- ? : link css with sass -->
+    <!-- ? link : css with sass -->
     <link rel="stylesheet" href="scss/main.css" />
+
+    <!-- ? link : box-icon -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="main-content">
     <!-- Here -->
 
-    <h1 class="text">Hello FreeCodeCamp</h1>
+    <!-- Todo : make a header -->
+    <header class="section sec-1 header active-section" id="home">
+      <div class="header-content">
+        <div class="left-header">
+          <div class="h-shape"></div>
+          <div class="image">
+            <img src="img/hero.png" alt="img-hero" />
+          </div>
+        </div>
+        <div class="right-header">
+          <h1 class="name">
+            Hi, I'm <span class="name">Ebayyou a/n boo</span>
+            As a Front end Developer
+          </h1>
+          <p>
+            I'm a Front end Developer, I love to create a beautiful design and functional Website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae velit eveniet doloremque!. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Sunt quidem aliquam at!
+          </p>
+          <div class="btn-con">
+            <a href="#" class="main-btn">
+              <span class="btn-text">Download CV</span>
+              <span class="btn-icon"><i class="bx bxs-download"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Todo : make a main -->
+    <main>
+      <!-- ? : about section -->
+      <section class="section sec-2 about" id="about">
+        <div class="main-title">
+          <h2>About <span>me</span><span class="bg-text">My Stats</span></h2>
+        </div>
+
+        <div class="about-container">
+          <div class="left-about">
+            <h4>Information About Me</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptate exercitationem ut praesentium nobis doloremque recusandae nemo porro, dolor perferendis neque molestias itaque animi. Saepe voluptate autem architecto
+              quia accusamus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quis accusamus, magnam molestias sequi voluptate repudiandae possimus! Veniam commodi asperiores quibusdam, consectetur sunt quaerat, eveniet quisquam tempore
+              eaque, dolorem ratione.
+            </p>
+            <div class="btn-con">
+              <a href="#" class="main-btn">
+                <span class="btn-text">Download CV</span>
+                <span class="btn-icon"><i class="bx bxs-download"></i></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="right-about">
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">560+</p>
+                <p class="small-text">
+                  Projects <br />
+                  Complated
+                </p>
+              </div>
+            </div>
+
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">10+</p>
+                <p class="small-text">
+                  Years Of <br />
+                  Experience
+                </p>
+              </div>
+            </div>
+
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">300+</p>
+                <p class="small-text">
+                  Happy <br />
+                  Clients
+                </p>
+              </div>
+            </div>
+
+            <div class="about-item">
+              <div class="abt-text">
+                <p class="large-text">400+</p>
+                <p class="small-text">
+                  Customer <br />
+                  Reviews
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <h4 class="stats-title">My Skills</h4>
+
+          <div class="progress-bars">
+            <div class="progress-bar">
+              <p class="prog-title">html 5</p>
+              <div class="progress-con">
+                <p class="prog text">90%</p>
+                <div class="progress">
+                  <span class="html"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-bar">
+              <p class="prog-title">CSS 3</p>
+              <div class="progress-con">
+                <p class="prog text">65%</p>
+                <div class="progress">
+                  <span class="css"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-bar">
+              <p class="prog-title">javascript</p>
+              <div class="progress-con">
+                <p class="prog text">60%</p>
+                <div class="progress">
+                  <span class="javascript"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-bar">
+              <p class="prog-title">react.js</p>
+              <div class="progress-con">
+                <p class="prog text">80%</p>
+                <div class="progress">
+                  <span class="react"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-bar">
+              <p class="prog-title">node.js</p>
+              <div class="progress-con">
+                <p class="prog text">50%</p>
+                <div class="progress">
+                  <span class="nodejs"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-bar">
+              <p class="prog-title">GIT / GITHUB</p>
+              <div class="progress-con">
+                <p class="prog text">90%</p>
+                <div class="progress">
+                  <span class="git"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ? : portfolio section -->
+      <section class="section sec-3 portfolio" id="portfolio"></section>
+
+      <!-- ? : blogs section -->
+      <section class="section sec-4 blogs" id="blogs"></section>
+
+      <!-- ? : contact section -->
+      <section class="section sec-5 contact" id="contact"></section>
+    </main>
+
+    <!-- Todo : control button -->
+    <div class="controlls">
+      <div class="control control-1 active-btn" data-id="home">
+        <i class="bx bxs-home"></i>
+      </div>
+      <div class="control control-2" data-id="about">
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="control control-3" data-id="portfolio">
+        <i class="bx bxs-briefcase-alt-2"></i>
+      </div>
+      <div class="control control-4" data-id="blogs">
+        <i class="bx bxs-receipt"></i>
+      </div>
+      <div class="control control-5" data-id="contact">
+        <i class="bx bxs-envelope-open"></i>
+      </div>
+    </div>
 
     <!-- Out -->
 

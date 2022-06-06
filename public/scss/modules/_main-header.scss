@@ -1,0 +1,60 @@
+// * use : mixin
+@use 'sub-mixin/mixin' as mx;
+@use 'sub-mixin/variable' as var;
+
+// Todo : Header content
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  .left-header {
+    @include mx.flex-box(row, start);
+    position: relative;
+    .h-shape {
+      @include mx.transDef();
+      width: 65%;
+      height: 100%;
+      background-color: var.$color-secondary;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      clip-path: polygon(0 0, 40% 0, 79% 100%, 0% 100%);
+    }
+    .image {
+      border-radius: var.$br-sm-2;
+      height: 80%;
+      width: 60%;
+      margin-left: 4rem;
+      background-color: var.$color-black;
+      @include mx.transDef();
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include mx.transDef();
+        filter: grayscale(100%);
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  .right-header {
+    @include mx.flex-box(column, center, start);
+    padding-right: 18rem;
+    .name {
+      font-size: 3rem;
+      span {
+        color: var.$color-secondary;
+      }
+    }
+    p {
+      margin: 1.5rem 0;
+      line-height: 2rem;
+      font-weight: 400;
+      color: var.$color-gray-200;
+    }
+  }
+}
