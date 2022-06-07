@@ -34,6 +34,13 @@ function pageTransitions() {
       element.classList.add('active-section');
     }
   });
+
+  // Todo 2 : toggle theme
+  const themeBtn = document.querySelector('.theme-btn');
+  themeBtn.addEventListener('click', () => {
+    let element = document.body;
+    element.classList.toggle('light-theme');
+  });
 }
 
 // active function

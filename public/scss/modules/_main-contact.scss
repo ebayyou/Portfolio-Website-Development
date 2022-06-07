@@ -1,0 +1,94 @@
+// * use : mixin
+@use 'sub-mixin/mixin' as mx;
+@use 'sub-mixin/variable' as var;
+
+// Todo : Blogs content
+.contact-content-con {
+  display: flex;
+  padding-top: 3.5rem;
+  .left-contact {
+    flex: 2;
+    h4 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 1rem 0;
+      line-height: 2rem;
+    }
+
+    .contact-info {
+      .contact-item {
+        @include mx.flex-box(row, space-between);
+        p {
+          margin: 0.3rem 0;
+          padding: 0;
+        }
+        .icon {
+          @include mx.grid-col(40px 1fr, 0);
+          i {
+            @include mx.flex-box(row, flex-start);
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
+    .contact-icon {
+      display: flex;
+      margin-top: 2rem;
+      a {
+        @include mx.flex-box();
+        color: var.$color-white;
+        background-color: var.$color-gray-500;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 0.4rem;
+        @include mx.transDef();
+        &:hover {
+          background-color: var.$color-secondary;
+          i {
+            color: var.$color-primary;
+          }
+        }
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .right-contact {
+    flex: 3;
+    margin-left: 3rem;
+    .input-control {
+      margin: 1.5rem 0;
+      input,
+      textarea {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 0.8rem 1.1rem;
+        outline: none;
+        border: none;
+        background-color: var.$color-gray-500;
+        width: 100%;
+        color: var.$color-white;
+        resize: none;
+      }
+    }
+    .input-control-2 {
+      display: flex;
+      :last-child {
+        margin-left: 1.5rem;
+      }
+    }
+    .submit-btn {
+      @include mx.flex-box();
+    }
+  }
+}
