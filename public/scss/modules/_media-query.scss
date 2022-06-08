@@ -1,1 +1,238 @@
 // Todo : make a responsive website design
+
+// * use : mixin
+@use 'sub-mixin/variable' as var;
+
+// ? : responsive for
+
+@media (max-width: 640px) {
+  // * : basic style
+  .section {
+    padding: 2rem 2.5rem;
+  }
+  .main-title {
+    h2 {
+      font-size: 2rem;
+      span {
+        font-size: 2.5rem;
+      }
+      .bg-text {
+        font-size: 2.5rem;
+        top: 30%;
+      }
+    }
+  }
+
+  // * : about
+  .about-container {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 1.5rem 0;
+    .left-about {
+      padding-right: 0;
+      p {
+        padding-left: 0;
+      }
+    }
+    .right-about {
+      grid-template-columns: 1.5fr;
+      padding-top: 2.5rem;
+      place-self: center;
+      width: 60%;
+    }
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+
+  // * : portfolio
+  .portfolios {
+    padding-bottom: 6rem;
+  }
+
+  // * : blogs
+  .blogs {
+    padding-bottom: 6rem;
+  }
+
+  // * : contact
+  .contact-content-con {
+    flex-direction: column;
+    .right-contact {
+      margin: 2.5rem 0 0;
+      padding-bottom: 4rem;
+      .input-control-2 {
+        flex-direction: column;
+        :last-child {
+          margin: 1.5rem 0 0;
+        }
+      }
+    }
+  }
+}
+
+// ? : responsive for
+@media (max-width: 700px) {
+  .section {
+    padding: 7rem 3rem;
+  }
+
+  .about-stats {
+    .progress-bars {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ? : responsive for
+@media (max-width: 970px) {
+  // * : basic style
+  .section {
+    padding: 7rem 6rem;
+  }
+
+  // * : header
+  header {
+    padding: 0;
+    .header-content {
+      grid-template-columns: 1fr;
+      padding-bottom: 6rem;
+      .left-header {
+        .h-shape {
+          display: none;
+        }
+        .image {
+          margin: 0 auto;
+          width: 90%;
+        }
+      }
+      .right-header {
+        padding: 0 !important;
+        grid-row: 1;
+        width: 90%;
+        margin: 0 auto;
+        .name {
+          font-size: 2.5rem !important;
+        }
+      }
+    }
+  }
+
+  // * : Indepedent components :
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .controlls {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var.$color-gray-500;
+    .control {
+      margin: 1rem;
+    }
+  }
+}
+
+// ? : responsive for
+@media (max-width: 1070px) {
+  // * : basic style
+  .section {
+    padding: 7rem 6rem;
+  }
+  .main-title {
+    h2 {
+      font-size: 2.5rem;
+      .bg-text {
+        font-size: 2.8rem;
+        top: 30%;
+      }
+    }
+  }
+
+  .header-content {
+    .left-header .image {
+      margin-left: 2rem;
+    }
+    .right-header {
+      margin-left: -5rem;
+      padding-right: 4rem;
+      .name {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.8rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  // * : about container
+  .about-container {
+    grid-template-columns: 1fr;
+    .right-about {
+      padding-top: 2.5rem;
+    }
+  }
+
+  // * : portfolio container
+  .portfolios {
+    grid-template-columns: 1fr;
+  }
+
+  // * : blogs container
+  .blogs {
+    grid-template-columns: 1fr;
+  }
+
+  .controlls {
+    top: 55%;
+  }
+}
+
+// ? : responsive for
+@media (max-width: 1470px) {
+  // * : basic style
+  .section {
+    padding: 4rem 8rem;
+  }
+  .main-title {
+    h2 {
+      font-size: 3.5rem;
+      .bg-text {
+        font-size: 3.5rem;
+        top: 30%;
+      }
+    }
+  }
+
+  // * : about container
+  header {
+    padding: 0 !important;
+  }
+
+  // * : about container
+  .about-container {
+    padding: 3.5rem 1rem 0;
+  }
+
+  // * : contact container
+  .contact-content-con {
+    flex-direction: column;
+    .right-contact {
+      margin: 2.5rem 0 0;
+      padding-bottom: 4rem;
+      .input-control-2 {
+        flex-direction: column;
+        :last-child {
+          margin: 1.5rem 0 0;
+        }
+      }
+    }
+  }
+}
